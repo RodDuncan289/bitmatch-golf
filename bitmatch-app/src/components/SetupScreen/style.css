@@ -1,0 +1,53 @@
+.setup-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: var(--secondary-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.team-setup, .game-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-setup h3, .game-settings h3 {
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-background);
+}
