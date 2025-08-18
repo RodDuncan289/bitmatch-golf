@@ -1,4 +1,5 @@
-import React, { createContext, useReducer, useContext, Dispatch } from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
+import type { Dispatch } from 'react';
 
 // 1. State and Action Types
 interface Player {
