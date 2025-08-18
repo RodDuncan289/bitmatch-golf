@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -62,4 +62,8 @@ input, select {
   max-width: 250px;
   width: 80%;
   margin: 20px auto;
+}
+
+button {
+  min-height: 44px;
 }

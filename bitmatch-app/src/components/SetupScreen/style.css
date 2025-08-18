@@ -11,10 +11,11 @@
   gap: 20px;
   width: 100%;
   max-width: 400px;
-  padding: 20px;
+  padding: 30px;
   background-color: var(--secondary-background-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .team-setup, .game-settings {
@@ -30,24 +31,28 @@
 }
 
 input[type="text"], select {
-  padding: 10px;
+  min-height: 44px;
+  padding: 10px 15px;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 8px; /* Slightly more rounded corners */
   border: 1px solid var(--border-color);
   background-color: var(--background-color);
   color: var(--text-color);
+  box-sizing: border-box;
 }
 
-button {
+.setup-form button {
   padding: 10px 20px;
   font-size: 18px;
+  font-weight: 600;
   background-color: var(--button-background);
   color: var(--button-text-color);
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  width: 100%;
 }
 
-button:hover {
+.setup-form button:hover {
   background-color: var(--button-hover-background);
 }
