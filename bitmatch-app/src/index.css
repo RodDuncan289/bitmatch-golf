@@ -56,3 +56,10 @@ input, select {
     color: var(--text-color);
     border: 1px solid var(--border-color);
 }
+
+.app-logo {
+  display: block;
+  max-width: 250px;
+  width: 80%;
+  margin: 20px auto;
+}
