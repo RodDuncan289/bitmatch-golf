@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className={`theme-${state.theme}`}>
+    <div className="app-wrapper">
       <img src="https://i.postimg.cc/VvsvsQx6/BitMatch.png" alt="BitMatch Logo" className="app-logo" />
       {renderScreen()}
     </div>

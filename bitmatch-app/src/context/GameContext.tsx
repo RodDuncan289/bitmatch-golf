@@ -22,7 +22,6 @@ interface HoleResult {
 interface GameState {
   bitValue: 0.20 | 0.50 | 1.00;
   startingHole: 1 | 10;
-  theme: 'light' | 'dark';
   team1: Team;
   team2: Team;
   currentHole: number;
@@ -31,7 +30,7 @@ interface GameState {
 }
 
 type Action =
-  | { type: 'START_GAME'; payload: { team1: Team; team2: Team; bitValue: 0.20 | 0.50 | 1.00; startingHole: 1 | 10; theme: 'light' | 'dark'} }
+  | { type: 'START_GAME'; payload: { team1: Team; team2: Team; bitValue: 0.20 | 0.50 | 1.00; startingHole: 1 | 10; } }
   | { type: 'UPDATE_BITS'; payload: { hole: number; team: 'team1' | 'team2'; change: number } }
   | { type: 'UPDATE_MATCHPLAY'; payload: { hole: number; result: 'win' | 'loss' | 'draw' } }
   | { type: 'SET_CURRENT_HOLE'; payload: number }
@@ -42,7 +41,6 @@ type Action =
 const initialState: GameState = {
   bitValue: 0.20,
   startingHole: 1,
-  theme: 'light',
   team1: { playerA: { name: '' }, playerB: { name: '' } },
   team2: { playerA: { name: '' }, playerB: { name: '' } },
   currentHole: 1,

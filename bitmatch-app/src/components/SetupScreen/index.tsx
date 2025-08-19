@@ -10,7 +10,6 @@ const SetupScreen: React.FC = () => {
   const [playerD, setPlayerD] = useState('');
   const [bitValue, setBitValue] = useState<0.20 | 0.50 | 1.00>(0.20);
   const [startingHole, setStartingHole] = useState<1 | 10>(1);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   const handleStartGame = () => {
     // Basic validation
@@ -26,7 +25,6 @@ const SetupScreen: React.FC = () => {
         team2: { playerA: { name: playerC }, playerB: { name: playerD } },
         bitValue,
         startingHole,
-        theme,
       },
     });
   };
@@ -80,13 +78,6 @@ const SetupScreen: React.FC = () => {
             <select value={startingHole} onChange={(e) => setStartingHole(Number(e.target.value) as 1 | 10)}>
               <option value={1}>Hole 1</option>
               <option value={10}>Hole 10</option>
-            </select>
-          </label>
-          <label>
-            Theme:
-            <select value={theme} onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
             </select>
           </label>
         </div>

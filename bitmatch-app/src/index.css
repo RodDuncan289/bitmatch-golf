@@ -8,33 +8,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Light Theme (Default) */
-  --background-color: #f0f0f0;
-  --text-color: #333333;
-  --primary-color: #007bff;
-  --primary-text-color: #ffffff;
-  --secondary-background-color: #ffffff;
-  --border-color: #cccccc;
-  --header-background: #e9ecef;
-  --highlight-color: #ffc107;
-  --button-background: #007bff;
-  --button-text-color: #ffffff;
-  --button-hover-background: #0056b3;
-  --active-button-background: #0056b3;
+  /* New Green Dark Theme */
+  --background-color: #0f2c22;
+  --secondary-background-color: #267238;
+  --text-color: #bddbc0;
+  --border-color: #479e55;
+  --button-background: #6fc67b;
+  --button-text-color: #0f2c22;
+  --button-hover-background: #9fd6a5;
+  --active-button-background: #9fd6a5;
+  --highlight-color: #9fd6a5;
   --disabled-opacity: 0.5;
-}
-
-.theme-dark {
-  /* Dark Theme Overrides */
-  --background-color: #121212;
-  --text-color: rgba(255, 255, 255, 0.87);
-  --primary-color: #0d6efd;
-  --secondary-background-color: #1e1e1e;
-  --border-color: #444444;
-  --header-background: #1e1e1e;
-  --button-background: #0d6efd;
-  --button-hover-background: #0b5ed7;
-  --active-button-background: #0b5ed7;
 }
 
 body {
