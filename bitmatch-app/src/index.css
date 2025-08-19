@@ -43,11 +43,15 @@ input, select {
 
 .app-logo {
   display: block;
-  max-width: 250px;
-  width: 80%;
-  margin: 20px auto;
+  max-width: 200px;
+  width: 70%;
+  margin: 20px auto 10px;
 }
 
 button {
   min-height: 44px;
+}
+
+.app-wrapper {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
