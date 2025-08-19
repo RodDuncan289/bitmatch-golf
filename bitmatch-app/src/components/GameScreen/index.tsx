@@ -16,6 +16,7 @@ const getHoleSequence = (startingHole: 1 | 10): number[] => {
 const GameScreen: React.FC = () => {
   const { state, dispatch } = useGame();
   const { team1, team2, currentHole, holes, startingHole } = state;
+  const [animatedScore, setAnimatedScore] = React.useState<'team1' | 'team2' | null>(null);
 
   // Memoize hole sequence
   const holeSequence = React.useMemo(() => getHoleSequence(startingHole), [startingHole]);
@@ -33,9 +34,17 @@ const GameScreen: React.FC = () => {
     return acc;
   }, 0);
 
+  React.useEffect(() => {
+    if (animatedScore) {
+      const timer = setTimeout(() => setAnimatedScore(null), 300); // Duration of the animation
+      return () => clearTimeout(timer);
+    }
+  }, [animatedScore]);
+
   // Handlers
   const handleBitChange = (team: 'team1' | 'team2', change: number) => {
     dispatch({ type: 'UPDATE_BITS', payload: { hole: currentHole, team, change } });
+    setAnimatedScore(team);
   };
 
   const handleMatchplayChange = (result: 'win' | 'loss' | 'draw') => {
@@ -85,13 +94,13 @@ const GameScreen: React.FC = () => {
         <div className="bits-scorer">
           <div className="team-bits">
             <button onClick={() => handleBitChange('team1', -1)}>−</button>
-            <span>{currentHoleData.bits.team1}</span>
+            <span className={animatedScore === 'team1' ? 'score-animated' : ''}>{currentHoleData.bits.team1}</span>
             <button onClick={() => handleBitChange('team1', 1)}>+</button>
           </div>
           <h3>Bits</h3>
           <div className="team-bits">
             <button onClick={() => handleBitChange('team2', -1)}>−</button>
-            <span>{currentHoleData.bits.team2}</span>
+            <span className={animatedScore === 'team2' ? 'score-animated' : ''}>{currentHoleData.bits.team2}</span>
             <button onClick={() => handleBitChange('team2', 1)}>+</button>
           </div>
         </div>

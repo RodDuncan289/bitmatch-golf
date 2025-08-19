@@ -123,3 +123,21 @@
   opacity: var(--disabled-opacity);
   cursor: not-allowed;
 }
+
+@keyframes score-update {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    color: var(--highlight-color);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score-animated {
+  display: inline-block; /* Needed for transform to work */
+  animation: score-update 0.3s ease-in-out;
+}
